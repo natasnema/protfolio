@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEMA</title>
+</head>
+
+<body>
+    <div class="ab" onclick="abclick()">BBBB</div>
+    <div class="ac" onclick="acclick()">CCCC</div>
+
+    <script>
+
+        var ab = document.querySelector('.ab')
+        var ac = document.querySelector('.ac')
+        var design
+
+        fetch('../json/design.json')
+            .then(function (design_response) {
+                return design_response.json();
+            })
+            .then(function (design_myJson) {
+                design = design_myJson;
+
+                console.log(design)
+            });
+
+            function acclick(){
+                    ac.innerHTML = 'AAAA'
+                }
+
+                function abclick(){
+                    design.web.forEach(element => {
+                    ab.innerHTML +=
+                    `
+                    ${element.name}
+                    `
+                });
+                }
+    </script>
+
+    <!-- <script src="./js/index.js"></script> -->
+</body>
+
+</html>

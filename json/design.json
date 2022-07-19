@@ -1,0 +1,120 @@
+{
+    "ani": [
+        {
+            "class": "ani_Mr_Gluttony",
+            "name": "Mr.Gluttony",
+            "poster": "./img/ani_Mr_Gluttony_poster.png",
+            "info": "./img/ani_Mr_Gluttony_info.png",
+            "link": "https://youtu.be/SijewyFER-E"
+        },
+        {
+            "class": "web_Love_Letter",
+            "name": "Love Letter",
+            "poster": "./img/ani_Love_Letter_poster.png",
+            "info": "./img/ani_Love_Letter_info.png",
+            "link": "https://youtu.be/5Edv_zxONpE"
+        },
+        {
+            "class": "web_Pin_Ann",
+            "name": "平安",
+            "poster": "./img/ani_Pin_Ann_poster.png",
+            "info": "./img/ani_Pin_Ann_info.png",
+            "link": "https://youtu.be/NJFoDY3YR2M"
+        },
+        {
+            "class": "web_Boo",
+            "name": "BOO",
+            "poster": "./img/ani_Boo_poster.png",
+            "info": "./img/ani_Boo_info.png",
+            "link": "https://youtu.be/NlysG3TvWY8"
+        }
+    ],
+    "game": [
+        {
+            "class": "game_guja_hunt",
+            "name": "GUJA HUNT 好獵手",
+            "info": "遊戲設計/遊戲測試",
+            "pic": "./img/game_guja_hunt_pic.png",
+            "img": "./img/game_guja_hunt_img.png"
+        },
+        {
+            "class": "game_workers",
+            "name": "Workers 工人物語",
+            "info": "遊戲設計/遊戲測試",
+            "pic": "./img/game_workers_pic.png",
+            "img": "./img/game_workers_img.png"
+        },
+        {
+            "class": "game_crowdfun",
+            "name": "CrowdFun 募樂",
+            "info": "遊戲設計/遊戲測試",
+            "pic": "./img/game_crowdfun_pic.png",
+            "img": "./img/game_crowdfun_img.png"
+        },
+        {
+            "class": "game_stone_cold_kitty",
+            "name": "Stone Cold Kitty 冰山美喵",
+            "info": "遊戲設計/遊戲測試",
+            "pic": "./img/game_stone_cold_kitty_pic.png",
+            "img": "./img/game_stone_cold_kitty_img.png"
+        },
+        {
+            "class": "game_bethlehem",
+            "name": "Bethlehem 伯利恆之星",
+            "info": "遊戲設計/遊戲測試",
+            "pic": "./img/game_bethlehem_pic.png",
+            "img": "./img/game_bethlehem_img.png"
+        },
+        {
+            "class": "game_52_days",
+            "name": "52 Days 五十二日",
+            "info": "遊戲設計/遊戲測試",
+            "pic": "./img/game_52_days_pic.png",
+            "img": "./img/game_52_days_img.png"
+        }
+    ],
+    "web": [
+        {
+            "class": "web_protfolio",
+            "name": "NEMA作品集網站",
+            "info": "全站製作與設計",
+            "img": "./img/web_portfolio.png",
+            "link": "https://natasnema.github.io/protfolio/"
+        },
+        {
+            "class": "web_spirited",
+            "name": "SPIRITED BAKERY",
+            "info": "網頁切版/網站動畫與效果",
+            "img": "./img/web_spirited.png",
+            "link": "https://natasnema.github.io/Spirited/"
+        },
+        {
+            "class": "web_morefun",
+            "name": "玩坊速切練習",
+            "info": "全站製作與設計",
+            "img": "./img/web_morefun.png",
+            "link": "https://natasnema.github.io/morefun_practice/"
+        },
+        {
+            "class": "web_pwin",
+            "name": "微軟首頁仿切",
+            "info": "切版/RWD 練習",
+            "img": "./img/web_win.png",
+            "link": "https://natasnema.github.io/microsoft_practice/"
+        },
+        {
+            "class": "web_pdigi",
+            "name": "Bootstrap練習",
+            "info": "切版/RWD 練習",
+            "img": "./img/web_digi.png",
+            "link": "https://natasnema.github.io/digi_pack_practice/"
+        },
+        {
+            "class": "web_colorblind",
+            "name": "色弱小遊戲",
+            "info": "JS練習",
+            "img": "./img/web_colorblind.png",
+            "link": "https://natasnema.github.io/CODE/blob/main/0328/0328_5_色弱遊戲/"
+        }
+    ]
+}

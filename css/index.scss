@@ -233,14 +233,14 @@ footer {
     @include px(250px, 0);
     @include py(50px, 50px);
     position: relative;
-    display: none;
+    // display: none;
 
     @media (max-width: 750px) {
         @include px(30px, 30px);
         @include py(50px, 50px);
         width: calc(100% - 30px);
     }
-    
+
     .about_cat {
         width: 700px;
         height: 450px;
@@ -327,18 +327,58 @@ footer {
     }
 }
 
-.web {
+.websites {
+    width: 100%;
+    @include bgi();
+    background-image: url(../img/about.jpg);
+    background-size: cover;
+    @include py(100px, 100px);
+    @include flex(row);
+    flex-wrap: wrap;
     display: none;
+
+    .web_card {
+        width: 20%;
+        @include flex(column);
+        flex-direction: column-reverse;
+        margin: 30px;
+
+        .web_name {
+            width: 100%;
+            @include txt(1.25rem, white);
+        }
+
+        .web_info {
+            width: 100%;
+            @include txt(0.75, rgb(180, 180, 180));
+            @include my(3px, 3px);
+            font-weight: 300;
+        }
+
+        .web_img {
+            width: 100%;
+            overflow: hidden;
+
+            a {
+                display: block;
+                width: 100%;
+                height: auto;
+
+                .web_pic {
+                    width: 100%;
+                    padding-bottom: 100%;
+                    @include bgi();
+                }
+            }
+        }
+    }
 }
 
 .ani {
-    display: none;
 }
 
 .game {
-    display: none;
 }
 
 .other {
-    display: none;
 }
