@@ -1,0 +1,44 @@
+[
+    {
+        "class": "game_guja_hunt",
+        "name": "GUJA HUNT 好獵手",
+        "info": "遊戲設計/遊戲測試",
+        "pic": "../img/guja_hunt_pic.png",
+        "img": "../img/guja_hunt_img.png"
+    },
+    {
+        "class": "game_workers",
+        "name": "Workers 工人物語",
+        "info": "遊戲設計/遊戲測試",
+        "pic": "../img/workers_pic.png",
+        "img": "../img/workers_img.png"
+    },
+    {
+        "class": "game_crowdfun",
+        "name": "CrowdFun 募樂",
+        "info": "遊戲設計/遊戲測試",
+        "pic": "../img/crowdfun_pic.png",
+        "img": "../img/crowdfun_img.png"
+    },
+    {
+        "class": "game_stone_cold_kitty",
+        "name": "Stone Cold Kitty 冰山美喵",
+        "info": "遊戲設計/遊戲測試",
+        "pic": "../img/stone_cold_kitty_pic.png",
+        "img": "../img/stone_cold_kitty_img.png"
+    },
+    {
+        "class": "game_bethlehem",
+        "name": "Bethlehem 伯利恆之星",
+        "info": "遊戲設計/遊戲測試",
+        "pic": "../img/bethlehem_pic.png",
+        "img": "../img/bethlehem_img.png"
+    },
+    {
+        "class": "game_52_days",
+        "name": "52 Days 五十二日",
+        "info": "遊戲設計/遊戲測試",
+        "pic": "../img/52_days_pic.png",
+        "img": "../img/52_days_img.png"
+    }
+]

@@ -1,0 +1,344 @@
+@mixin txt($rem, $color) {
+    color: $color;
+    font-family: "Roboto Mono", monospace, "Noto Sans TC", sans-serif;
+    font-size: $rem;
+    text-align: center;
+}
+
+@mixin px($pl, $pr) {
+    padding-left: $pl;
+    padding-right: $pr;
+}
+
+@mixin py($pt, $pb) {
+    padding-top: $pt;
+    padding-bottom: $pb;
+}
+
+@mixin mx($ml, $mr) {
+    margin-left: $ml;
+    margin-right: $mr;
+}
+
+@mixin my($mt, $mb) {
+    margin-top: $mt;
+    margin-bottom: $mb;
+}
+
+@mixin flex($flex) {
+    display: flex;
+    flex-direction: $flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin bgi() {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    width: calc(100% - 100px);
+    height: 80px;
+    @include flex(row);
+    @include px(50px, 50px);
+    justify-content: space-between;
+    background-color: rgb(70, 70, 70);
+
+    @media (max-width: 750px) {
+        height: 120px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .nav_logo {
+        width: 50px;
+        height: 50px;
+        background-image: url(../img/nav_logo.svg);
+        background-color: #fff;
+        @include bgi();
+        border-radius: 999rem;
+        border: 5px black solid;
+        box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+
+        @media (max-width: 750px) {
+            margin-top: 10px;
+        }
+
+        &:hover {
+            width: 55px;
+            height: 55px;
+        }
+    }
+
+    .nav_menu {
+        @include flex(row);
+
+        @media (max-width: 750px) {
+            margin-bottom: 10px;
+        }
+
+        .nav_tag {
+            @include mx(10px, 10px);
+            @include txt(1.25rem, rgb(150, 150, 150));
+
+            &:hover {
+                @include txt(1.35rem, ivory);
+            }
+
+            @media (max-width: 750px) {
+                @include mx(5px, 5px);
+                font-size: 1rem;
+
+                &:hover {
+                    @include txt(1.1rem, ivory);
+                }
+            }
+
+            @media (max-width: 450px) {
+                @include mx(3px, 3px);
+                font-size: 0.75rem;
+
+                &:hover {
+                    @include txt(0.85em, ivory);
+                }
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(70, 70, 70);
+    @include flex(row);
+
+    @media (max-width: 600px) {
+        height: 80px;
+        flex-direction: column;
+    }
+
+    .footer_info {
+        @include mx(15px, 15px);
+        @include txt(0.75rem, ivory);
+    }
+}
+
+.contents {
+    width: 100%;
+    height: calc(100vh - 110px);
+    overflow: scroll;
+
+    @media (max-width: 750px) {
+        height: calc(100vh - 150px);
+    }
+    @media (max-width: 600px) {
+        height: calc(100vh - 200px);
+    }
+}
+
+.info {
+    width: 100%;
+    height: 230%;
+    @include flex(column);
+    // display: none;
+
+    .info_banner {
+        width: 100%;
+        height: 130%;
+        background-image: url(../img/info_banner.jpg);
+        @include bgi();
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 2;
+
+        .info_logo {
+            width: 300px;
+            height: 300px;
+            background-image: url(../img/info_logo.png);
+            @include bgi();
+            position: absolute;
+            top: calc(50% - 150px);
+            left: calc(50% - 150px);
+            z-index: 3;
+        }
+    }
+
+    .info_nema {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        @include py(50px, 50px);
+        @include flex(column);
+
+        .info_photo {
+            width: 300px;
+            height: 300px;
+            border-radius: 999rem;
+            background-image: url(../img/info_photo.jpg);
+            @include bgi();
+            margin-bottom: 20px;
+        }
+
+        .info_name_en {
+            @include txt(4rem, rgba(0, 0, 0, 0));
+            font-family: "Dela Gothic One", cursive;
+            background: linear-gradient(to right, rgb(48, 255, 127), rgb(167, 241, 241), rgb(0, 153, 153));
+            background-clip: text;
+        }
+
+        .info_profession_en {
+            @include txt(1.5rem, ivory);
+        }
+
+        .info_name_ch {
+            @include txt(2rem, ivory);
+            @include my(30px, 10px);
+        }
+
+        .info_profession_ch {
+            @include txt(1.5rem, ivory);
+        }
+
+        .info_skill {
+            @include txt(1rem, ivory);
+            @include my(30px, 10px);
+        }
+    }
+}
+
+.about {
+    width: calc(100% - 250px);
+    @include bgi();
+    background-image: url(../img/about.jpg);
+    background-size: cover;
+    @include px(250px, 0);
+    @include py(50px, 50px);
+    position: relative;
+    display: none;
+
+    @media (max-width: 750px) {
+        @include px(30px, 30px);
+        @include py(50px, 50px);
+        width: calc(100% - 30px);
+    }
+    
+    .about_cat {
+        width: 700px;
+        height: 450px;
+        position: fixed;
+        right: 0px;
+        bottom: 30px;
+        background-image: url(../img/about_cat.png);
+        @include bgi();
+        background-size: cover;
+        z-index: 1;
+
+        @media (max-width: 600px) {
+            bottom: 80px;
+        }
+    }
+
+    .about_title {
+        width: 450px;
+        @include txt(4rem, rgba(0, 0, 0, 0));
+        font-family: "Dela Gothic One", cursive;
+        background: linear-gradient(to right, rgb(48, 255, 127), rgb(167, 241, 241), rgb(0, 153, 153));
+        background-clip: text;
+        @include my(0px, 10px);
+        text-align: left;
+        position: relative;
+        z-index: 2;
+
+        @media (max-width: 500px) {
+            font-size: 2.5rem;
+        }
+    }
+
+    .about_subtitle {
+        width: 250px;
+        @include txt(2rem, rgba(0, 0, 0, 0));
+        background: linear-gradient(to right, rgb(48, 255, 127), rgb(167, 241, 241), rgb(0, 153, 153));
+        background-clip: text;
+        font-weight: 500;
+        @include my(10px, 0px);
+        text-align: left;
+        position: relative;
+        z-index: 2;
+    }
+
+    .about_content {
+        @include txt(1rem, ivory);
+        text-align: left;
+        position: relative;
+        @include my(20px, 0px);
+        z-index: 2;
+
+        @media (max-width: 450px) {
+            font-size: 0.8rem;
+        }
+    }
+
+    .about_sub {
+        ul {
+            list-style-type: none;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            padding-inline-start: 0px;
+            @include my(20px, 0px);
+            @include txt(1.5rem, ivory);
+            text-align: left;
+            font-weight: 500;
+            position: relative;
+            z-index: 2;
+
+            @media (max-width: 450px) {
+                font-size: 0.8rem;
+            }
+
+            li {
+                @include my(5px, 0px);
+                @include txt(1rem, rgb(204, 204, 204));
+                text-align: left;
+
+                @media (max-width: 450px) {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+.web {
+    display: none;
+}
+
+.ani {
+    display: none;
+}
+
+.game {
+    display: none;
+}
+
+.other {
+    display: none;
+}
