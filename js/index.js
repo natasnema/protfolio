@@ -97,8 +97,8 @@ function aboutclick() {
         `
 }
 
-// fetch('https://natasnema.github.io/protfolio/json/design.json')
-fetch('../json/design.json')
+fetch('https://natasnema.github.io/protfolio/json/design.json')
+// fetch('../json/design.json')
     .then(function (design_response) {
         return design_response.json();
     })
