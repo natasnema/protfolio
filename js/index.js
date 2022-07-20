@@ -1,6 +1,15 @@
 var contents = document.querySelector('.contents')
 var design
 
+fetch('../json/design.json')
+    .then(function (design_response) {
+        return design_response.json();
+    })
+    .then(function (design_myJson) {
+        design = design_myJson;
+        return design
+    });
+
 function navclick() {
     contents.innerHTML = ""
     contents.innerHTML =
@@ -93,15 +102,6 @@ function aboutclick() {
         </section>
     `
 }
-
-fetch('../json/design.json')
-    .then(function (design_response) {
-        return design_response.json();
-    })
-    .then(function (design_myJson) {
-        design = design_myJson;
-        return design
-    });
 
 function webclick() {
     contents.innerHTML =
