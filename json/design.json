@@ -5,28 +5,28 @@
             "name": "Mr.Gluttony",
             "poster": "./img/ani_Mr_Gluttony_poster.png",
             "info": "./img/ani_Mr_Gluttony_info.png",
-            "link": "https://youtu.be/SijewyFER-E"
+            "link": "https://www.youtube.com/embed/SijewyFER-E"
         },
         {
             "class": "web_Love_Letter",
             "name": "Love Letter",
             "poster": "./img/ani_Love_Letter_poster.png",
             "info": "./img/ani_Love_Letter_info.png",
-            "link": "https://youtu.be/5Edv_zxONpE"
+            "link": "https://www.youtube.com/embed/5Edv_zxONpE"
         },
         {
             "class": "web_Pin_Ann",
             "name": "平安",
             "poster": "./img/ani_Pin_Ann_poster.png",
             "info": "./img/ani_Pin_Ann_info.png",
-            "link": "https://youtu.be/NJFoDY3YR2M"
+            "link": "https://www.youtube.com/embed/NJFoDY3YR2M"
         },
         {
             "class": "web_Boo",
             "name": "BOO",
             "poster": "./img/ani_Boo_poster.png",
             "info": "./img/ani_Boo_info.png",
-            "link": "https://youtu.be/NlysG3TvWY8"
+            "link": "https://www.youtube.com/embed/NlysG3TvWY8"
         }
     ],
     "game": [
@@ -76,45 +76,66 @@
     "web": [
         {
             "class": "web_protfolio",
-            "name": "NEMA作品集網站",
+            "name": "NEMA 作品集網站",
             "info": "全站製作與設計",
             "img": "./img/web_portfolio.png",
+            "color": "#fff",
             "link": "https://natasnema.github.io/protfolio/"
         },
         {
             "class": "web_spirited",
-            "name": "SPIRITED BAKERY",
+            "name": "SPIRITED BAKERY 美式餅乾",
             "info": "網頁切版/網站動畫與效果",
             "img": "./img/web_spirited.png",
             "link": "https://natasnema.github.io/Spirited/"
         },
         {
             "class": "web_morefun",
-            "name": "玩坊速切練習",
+            "name": "玩坊 敏捷練習",
             "info": "全站製作與設計",
             "img": "./img/web_morefun.png",
-            "link": "https://natasnema.github.io/morefun_practice/"
+            "color": "#fff",
+            "link": "https://natasnema.github.io/practice_morefun/"
         },
         {
             "class": "web_pwin",
-            "name": "微軟首頁仿切",
+            "name": "微軟首頁 仿切",
             "info": "切版/RWD 練習",
             "img": "./img/web_win.png",
-            "link": "https://natasnema.github.io/microsoft_practice/"
+            "color": "#fff",
+            "link": "https://natasnema.github.io/practice_microsoft/"
         },
         {
             "class": "web_pdigi",
-            "name": "Bootstrap練習",
+            "name": "Bootstrap 練習",
             "info": "切版/RWD 練習",
             "img": "./img/web_digi.png",
-            "link": "https://natasnema.github.io/digi_pack_practice/"
+            "color": "#fff",
+            "link": "https://natasnema.github.io/practice_digi_pack/"
         },
         {
             "class": "web_colorblind",
             "name": "色弱小遊戲",
-            "info": "JS練習",
+            "info": "JS 練習",
             "img": "./img/web_colorblind.png",
-            "link": "https://natasnema.github.io/CODE/blob/main/0328/0328_5_色弱遊戲/"
+            "color": "#fff",
+            "link": "https://natasnema.github.io/practice_colorblind/"
+        },
+        {
+            "class": "web_pokemon",
+            "name": "寶可夢",
+            "info": "SCSS/HTML練習",
+            "img": "./img/web_pokemon.png",
+            "color": "#fff",
+            "link": "https://natasnema.github.io/practice_pokemon/"
+        },
+        {
+            "class": "",
+            "name": "",
+            "info": "",
+            "img": "",
+            "color": "rgba(0, 0, 0, 0)",
+            "link": ""
         }
     ]
 }

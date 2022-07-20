@@ -1,17 +1,33 @@
 var design
 var contents = document.querySelector('.contents')
-
+var infos = document.querySelector('.info')
+var aboutme = document.querySelector('.about')
+var webs = document.querySelector('.websites')
 var anis = document.querySelector('.animations')
 var games = document.querySelector('.boardgames')
 var others = document.querySelector('.others')
 
+// fetch('https://natasnema.github.io/protfolio/json/design.json')
+fetch('./json/design.json')
+    .then(function (design_response) {
+        return design_response.json();
+    })
+    .then(function (design_myJson) {
+        design = design_myJson;
+        return design
+    });
+
 function navclick() {
 
-    contents.innerHTML = ""
+    infos.style = "display: flex;"
+    aboutme.style = "display: none;"
+    webs.style = "display: none;"
+    anis.style = "display: none;"
+    games.style = "display: none;"
+    others.style = "display: none;"
 
-    contents.innerHTML =
+    infos.innerHTML =
         `
-        <section class="info">
             <div class="info_banner">
                 <div class="info_logo"></div>
             </div>
@@ -30,15 +46,20 @@ function navclick() {
                     Blender</div>
 
             </div>
-        </section>
-        `
+    `
 }
 
 function aboutclick() {
 
-    contents.innerHTML =
+    infos.style = "display: none;"
+    aboutme.style = "display: block;"
+    webs.style = "display: none;"
+    anis.style = "display: none;"
+    games.style = "display: none;"
+    others.style = "display: none;"
+
+    aboutme.innerHTML =
         `
-        <section class="about">
             <div class="about_cat"></div>
             <div class="about_title">ABOUT ME</div>
             <div class="about_subtitle">斜斜斜槓設計師</div>
@@ -93,29 +114,19 @@ function aboutclick() {
                     <li>2020/10 2020 新銳桌遊設計展</li>
                 </ul>
             </div>
-        </section>
-        `
+    `
 }
 
-// fetch('https://natasnema.github.io/protfolio/json/design.json')
-fetch('../json/design.json')
-    .then(function (design_response) {
-        return design_response.json();
-    })
-    .then(function (design_myJson) {
-        design = design_myJson;
-        return design
-    });
-    
 function webclick() {
 
-    contents.innerHTML = 
-    `<section class="websites"></section>`
-
-    var websites = document.querySelector('.websites')
+    infos.style = "display: none;"
+    aboutme.style = "display: none;"
+    webs.style = "display: flex;"
+    anis.style = "display: none;"
+    games.style = "display: none;"
+    others.style = "display: none;"
 
     design.web.forEach(webs => {
-
         websites.innerHTML +=
             `
                 <div class="web_card">
@@ -135,38 +146,26 @@ function webclick() {
 }
 
 function aniclick() {
-
-    contents.innerHTML = 
-    `<section class="animations"></section>`
-
     var animations = document.querySelector('.animations')
+    animations.style = "display:flex;"
 
-    design.ani.forEach(anis => {
-        animations.innerHTML +=
-        `
-            <div class="ani_card">
+    // contents.innerHTML = 
+    // `<section class="animations"></section>`
 
-                <div class="ani_name">${anis.name}</div>
-                <div class="ani_poster" style="background-image:url(${anis.poster});"></div>
-                <div class="ani_info" style="background-image:url(${anis.info});"></div>
+    // var animations = document.querySelector('.animations')
 
-                <iframe 
-                width="560" height="315" 
-                src="${anis.link}" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; 
-                autoplay; 
-                clipboard-write; 
-                encrypted-media; 
-                gyroscope; 
-                picture-in-picture" 
-                allowfullscreen>
-                </iframe>
+    // design.ani.forEach(anis => {
+    //     animations.innerHTML +=
+    //     `
+    //         <div class="ani_card">
 
-            </div>
-        `
-    });
+    //             <div class="ani_name">${anis.name}</div>
+    //             <div class="ani_poster" style="background-image:url(${anis.poster});"></div>
+    //             <div class="ani_info" style="background-image:url(${anis.info});"></div>
+    //             <iframe class="ani_video" src="${anis.link}" frameborder="0"></iframe>
+    //         </div>
+    //     `
+    // });
 }
 
 function gameclick() {

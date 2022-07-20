@@ -77,6 +77,7 @@ nav {
         border-radius: 999rem;
         border: 5px black solid;
         box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
 
         @media (max-width: 750px) {
             margin-top: 10px;
@@ -98,6 +99,7 @@ nav {
         .nav_tag {
             @include mx(10px, 10px);
             @include txt(1.25rem, rgb(150, 150, 150));
+            transition: 0.5s;
 
             &:hover {
                 @include txt(1.35rem, ivory);
@@ -142,7 +144,7 @@ footer {
 }
 
 .contents {
-    width: 100%;
+    width: 100vw;
     height: calc(100vh - 110px);
     overflow: scroll;
 
@@ -158,7 +160,6 @@ footer {
     width: 100%;
     height: 230%;
     @include flex(column);
-    // display: none;
 
     .info_banner {
         width: 100%;
@@ -233,7 +234,6 @@ footer {
     @include px(250px, 0);
     @include py(50px, 50px);
     position: relative;
-    // display: none;
 
     @media (max-width: 750px) {
         @include px(30px, 30px);
@@ -329,19 +329,19 @@ footer {
 
 .websites {
     width: 100%;
+    height: 100%;
     @include bgi();
     background-image: url(../img/about.jpg);
     background-size: cover;
     @include py(100px, 100px);
     @include flex(row);
     flex-wrap: wrap;
-    display: none;
 
     .web_card {
-        width: 20%;
+        width: 15%;
         @include flex(column);
         flex-direction: column-reverse;
-        margin: 30px;
+        margin: 50px;
 
         .web_name {
             width: 100%;
@@ -368,6 +368,12 @@ footer {
                     width: 100%;
                     padding-bottom: 100%;
                     @include bgi();
+                    transition: 0.5s;
+
+                    &:hover {
+                        transform: scale(1.15);
+                        opacity: 0.8;
+                    }
                 }
             }
         }
@@ -375,10 +381,33 @@ footer {
 }
 
 .animations {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/about.jpg);
+    @include bgi();
+    background-size: cover;
+    @include flex(column);
+
+    .ani_card {
+        width: 80%;
+        @include txt(1.5rem, white);
+        margin: auto;
+        @include my(50px, 50px);
+        @include flex(row);
+        flex-wrap: wrap;
+
+        .ani_name {
+            width: 100%;
+            text-align: left;
+        }
+    }
+    
 }
 
 .boardgames {
+    display: none;
 }
 
-.other {
+.others {
+    display: none;
 }
