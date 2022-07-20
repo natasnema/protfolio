@@ -438,7 +438,6 @@ footer .footer_info {
 
 .animations {
   width: 100%;
-  height: 100%;
   background-image: url(../img/about.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -448,9 +447,10 @@ footer .footer_info {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  justify-content: flex-start;
 }
 .animations .ani_card {
-  width: 80%;
+  width: 90%;
   color: white;
   font-family: "Roboto Mono", monospace, "Noto Sans TC", sans-serif;
   font-size: 1.5rem;
@@ -458,15 +458,41 @@ footer .footer_info {
   margin: auto;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+.animations .ani_card .ani_name {
+  text-align: left;
+  margin: 20px;
+}
+.animations .ani_card .ani_flex {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
-.animations .ani_card .ani_name {
-  width: 100%;
-  text-align: left;
+.animations .ani_card .ani_flex .ani_poster {
+  width: 300px;
+  height: 450px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+  margin: 20px;
+}
+.animations .ani_card .ani_flex .ani_info {
+  width: 300px;
+  height: 450px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+  margin: 20px;
+}
+.animations .ani_card .ani_flex iframe {
+  width: 900px;
+  height: 450px;
+  margin: 20px;
 }
 
 .boardgames {

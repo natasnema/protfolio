@@ -147,23 +147,23 @@ function aniclick() {
             <div class="ani_card">
 
                 <div class="ani_name">${anis.name}</div>
-                <div class="ani_poster" style="background-image:url(${anis.poster});"></div>
-                <div class="ani_info" style="background-image:url(${anis.info});"></div>
+                <div class="ani_flex">
+                    <div class="ani_poster" style="background-image:url(${anis.poster});"></div>
+                    <div class="ani_info" style="background-image:url(${anis.info});"></div>
 
-                <iframe 
-                width="560" height="315" 
-                src="${anis.link}" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; 
-                autoplay; 
-                clipboard-write; 
-                encrypted-media; 
-                gyroscope; 
-                picture-in-picture" 
-                allowfullscreen>
-                </iframe>
-
+                    <iframe 
+                    src="${anis.link}" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; 
+                    autoplay; 
+                    clipboard-write; 
+                    encrypted-media; 
+                    gyroscope; 
+                    picture-in-picture" 
+                    allowfullscreen>
+                    </iframe>
+                </div>
             </div>
         `
     });

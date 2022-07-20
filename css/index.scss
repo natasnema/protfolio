@@ -382,26 +382,50 @@ footer {
 
 .animations {
     width: 100%;
-    height: 100%;
     background-image: url(../img/about.jpg);
     @include bgi();
     background-size: cover;
     @include flex(column);
+    justify-content: flex-start;
 
     .ani_card {
-        width: 80%;
+        width: 90%;
         @include txt(1.5rem, white);
         margin: auto;
         @include my(50px, 50px);
-        @include flex(row);
-        flex-wrap: wrap;
-
         .ani_name {
-            width: 100%;
             text-align: left;
+            margin: 20px;
+        }
+
+        .ani_flex {
+            @include flex(row);
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .ani_poster {
+                width: 300px;
+                height: 450px;
+                @include bgi();
+                background-size: cover;
+                margin: 20px;
+            }
+    
+            .ani_info {
+                width: 300px;
+                height: 450px;
+                @include bgi();
+                background-size: cover;
+                margin: 20px;
+            }
+    
+            iframe {
+                width: 900px;
+                height: 450px;
+                margin: 20px;
+            }
         }
     }
-    
 }
 
 .boardgames {
