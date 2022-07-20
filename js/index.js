@@ -1,7 +1,7 @@
 var contents = document.querySelector('.contents')
 var design
 
-fetch('../json/design.json')
+fetch('https://natasnema.github.io/protfolio/json/design.json')
     .then(function (design_response) {
         return design_response.json();
     })
@@ -130,6 +130,36 @@ function webclick() {
 
 }
 
+function aniclick() {
+    contents.innerHTML = 
+    `<section class="animations"></section>`
 
+    var animations = document.querySelector('.animations')
+
+    animations.style = 'display: flex;'
+
+    design.ani.forEach(anis => {
+        animations.innerHTML =+
+        `
+        
+        `
+    });
+}
+
+function gameclick() {
+    contents.innerHTML = 
+    `<section class="boardgames"></section>`
+
+    var animations = document.querySelector('.boardgames')
+
+    boardgames.style = 'display: flex;'
+
+    design.game.forEach(games => {
+        boardgames.innerHTML =+
+        `
+        
+        `
+    });
+}
 
 
