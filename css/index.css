@@ -589,8 +589,56 @@ footer .footer_info {
 
 .boardgames {
   width: 100%;
-  height: 100%;
+  height: 98%;
 }
+.boardgames .game_card {
+  width: 90%;
+  height: 40%;
+  margin: auto;
+  padding-top: 2%;
+  margin-top: 0%;
+  margin-bottom: 2%;
+}
+.boardgames .game_card .game_txt {
+  width: 100%;
+  height: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-left: 0.5%;
+}
+.boardgames .game_card .game_txt .game_name {
+  width: 50%;
+  color: white;
+  font-family: "Roboto Mono", monospace, "Noto Sans TC", sans-serif;
+  font-size: 1.25rem;
+  text-align: center;
+  text-align: left;
+}
+.boardgames .game_card .game_txt .game_info {
+  width: 50%;
+  color: white;
+  font-family: "Roboto Mono", monospace, "Noto Sans TC", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 300;
+  text-align: left;
+}
+.boardgames .game_card .game_img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.boardgames .game_card .game_img .game_pic,
+.boardgames .game_card .game_img .game_img_1,
+.boardgames .game_card .game_img .game_img_2 {
+  width: 33%;
+}
+
 .others {
   display: none;
 }/*# sourceMappingURL=index.css.map */

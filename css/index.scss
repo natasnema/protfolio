@@ -510,10 +510,46 @@ footer {
 
 .boardgames {
     width: 100%;
-    height: 100%;
+    height: 98%;
 
     .game_card {
-        
+        width: 90%;
+        height: 40%;
+        margin: auto;
+        padding-top: 2%;
+        @include my(0%, 2%);
+
+        .game_txt {
+            width: 100%;
+            height: 1.5rem;
+            @include flex(row);
+            margin-bottom: 20px;
+            padding-left: 0.5%;
+
+            .game_name {
+                width: 50%;
+                @include txt(1.25rem, white);
+                text-align: left;
+            }
+
+            .game_info {
+                width: 50%;
+                @include txt(1rem, white);
+                font-weight: 300;
+                text-align: left;
+            }
+        }
+
+        .game_img {
+            @include flex(row);
+            width: 100%;
+
+            .game_pic, 
+            .game_img_1, 
+            .game_img_2 {
+                width: 33%;
+            }
+        }
     }
 }
 

@@ -178,11 +178,18 @@ function gameclick() {
         boardgames.innerHTML +=
         `
         <div class="game_card">
-            <div class="game_name">${games.name}</div>
-            <div class="game_info">${games.info}</div>
-            <div class="game_pic" style="background-image:url(${games.pic});"></div>
-            <div class="game_img_1" style="background-image:url(${games.img_1});"></div>
-            <div class="game_img_2" style="background-image:url(${games.img_2});"></div>
+
+            <div class="game_txt">
+                <div class="game_name">${games.name}</div>
+                <div class="game_info">${games.info}</div>
+            </div>
+
+            <div class="game_img">
+                <img class="game_pic" src="${games.pic}">
+                <img class="game_img_1" src="${games.img_1}">
+                <img class="game_img_2" src="${games.img_2}">
+            </div>
+
         </div>
         `
     });
