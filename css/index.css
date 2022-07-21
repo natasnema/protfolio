@@ -8,6 +8,10 @@ body {
   box-sizing: border-box;
 }
 
+* {
+  transition: 0.3s;
+}
+
 .a,
 a:hover {
   text-decoration: none;
@@ -44,7 +48,6 @@ nav .nav_logo {
   border-radius: 999rem;
   border: 5px black solid;
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-  transition: 0.5s;
 }
 @media (max-width: 750px) {
   nav .nav_logo {
@@ -73,7 +76,6 @@ nav .nav_menu .nav_tag {
   font-family: "Roboto Mono", monospace, "Noto Sans TC", sans-serif;
   font-size: 1.25rem;
   text-align: center;
-  transition: 0.5s;
 }
 nav .nav_menu .nav_tag:hover {
   color: ivory;
@@ -135,6 +137,11 @@ footer .footer_info {
 .contents {
   width: 100vw;
   height: calc(100vh - 110px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../img/about.jpg);
+  background-size: cover;
   overflow: scroll;
 }
 @media (max-width: 750px) {
@@ -242,11 +249,6 @@ footer .footer_info {
 
 .about {
   width: calc(100% - 250px);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url(../img/about.jpg);
-  background-size: cover;
   padding-left: 250px;
   padding-right: 0;
   padding-top: 50px;
@@ -375,36 +377,60 @@ footer .footer_info {
 .websites {
   width: 100%;
   height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url(../img/about.jpg);
-  background-size: cover;
   padding-top: 100px;
   padding-bottom: 100px;
+}
+.websites .web_cards {
+  width: 1540px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
+  margin: auto;
 }
-.websites .web_card {
-  width: 15%;
+@media (max-width: 1500px) {
+  .websites .web_cards {
+    width: 1155px;
+  }
+}
+@media (max-width: 1100px) {
+  .websites .web_cards {
+    width: 770px;
+  }
+}
+@media (max-width: 730px) {
+  .websites .web_cards {
+    width: 385px;
+  }
+}
+.websites .web_cards .web_card {
+  width: 285px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-direction: column-reverse;
-  margin: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
-.websites .web_card .web_name {
+@media (max-width: 400px) {
+  .websites .web_cards .web_card {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+.websites .web_cards .web_card .web_name {
   width: 100%;
   color: white;
   font-family: "Roboto Mono", monospace, "Noto Sans TC", sans-serif;
   font-size: 1.25rem;
   text-align: center;
 }
-.websites .web_card .web_info {
+.websites .web_cards .web_card .web_info {
   width: 100%;
   color: rgb(180, 180, 180);
   font-family: "Roboto Mono", monospace, "Noto Sans TC", sans-serif;
@@ -414,35 +440,30 @@ footer .footer_info {
   margin-bottom: 3px;
   font-weight: 300;
 }
-.websites .web_card .web_img {
+.websites .web_cards .web_card .web_img {
   width: 100%;
   overflow: hidden;
 }
-.websites .web_card .web_img a {
+.websites .web_cards .web_card .web_img a {
   display: block;
   width: 100%;
   height: auto;
 }
-.websites .web_card .web_img a .web_pic {
+.websites .web_cards .web_card .web_img a .web_pic {
   width: 100%;
   padding-bottom: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  transition: 0.5s;
 }
-.websites .web_card .web_img a .web_pic:hover {
+.websites .web_cards .web_card .web_img a .web_pic:hover {
   transform: scale(1.15);
   opacity: 0.8;
 }
 
 .animations {
   width: 100%;
-  background-image: url(../img/about.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-size: cover;
+  height: 320%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -451,6 +472,7 @@ footer .footer_info {
 }
 .animations .ani_card {
   width: 90%;
+  height: 80%;
   color: white;
   font-family: "Roboto Mono", monospace, "Noto Sans TC", sans-serif;
   font-size: 1.5rem;
@@ -458,47 +480,117 @@ footer .footer_info {
   margin: auto;
   margin-top: 50px;
   margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: white 3px solid;
 }
 .animations .ani_card .ani_name {
   text-align: left;
   margin: 20px;
 }
+@media (max-width: 1400px) {
+  .animations .ani_card .ani_name {
+    text-align: center;
+  }
+}
 .animations .ani_card .ani_flex {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+@media (max-width: 1400px) {
+  .animations .ani_card .ani_flex {
+    flex-direction: column;
+  }
+}
+.animations .ani_card .ani_flex .ani_img {
+  width: 50%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
-.animations .ani_card .ani_flex .ani_poster {
-  width: 300px;
-  height: 450px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-size: cover;
+@media (max-width: 1200px) {
+  .animations .ani_card .ani_flex .ani_img {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.animations .ani_card .ani_flex .ani_img .ani_poster {
+  width: calc(50% - 40px);
   margin: 20px;
 }
-.animations .ani_card .ani_flex .ani_info {
-  width: 300px;
-  height: 450px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-size: cover;
+@media (max-width: 1200px) {
+  .animations .ani_card .ani_flex .ani_img .ani_poster {
+    width: 260px;
+  }
+}
+@media (max-width: 670px) {
+  .animations .ani_card .ani_flex .ani_img .ani_poster {
+    width: 200px;
+  }
+}
+@media (max-width: 540px) {
+  .animations .ani_card .ani_flex .ani_img .ani_poster {
+    width: 150px;
+  }
+}
+.animations .ani_card .ani_flex .ani_img .ani_info {
+  width: calc(50% - 40px);
   margin: 20px;
 }
-.animations .ani_card .ani_flex iframe {
-  width: 900px;
-  height: 450px;
+@media (max-width: 1200px) {
+  .animations .ani_card .ani_flex .ani_img .ani_info {
+    width: 260px;
+  }
+}
+@media (max-width: 670px) {
+  .animations .ani_card .ani_flex .ani_img .ani_info {
+    width: 200px;
+  }
+}
+@media (max-width: 540px) {
+  .animations .ani_card .ani_flex .ani_img .ani_info {
+    width: 150px;
+  }
+}
+.animations .ani_card iframe {
+  width: calc(50% - 40px);
+  height: 100%;
   margin: 20px;
+}
+@media (max-width: 1400px) {
+  .animations .ani_card iframe {
+    height: 500px;
+  }
+}
+@media (max-width: 1200px) {
+  .animations .ani_card iframe {
+    width: 560px;
+    height: 450px;
+  }
+}
+@media (max-width: 670px) {
+  .animations .ani_card iframe {
+    width: 440px;
+    height: 350px;
+  }
+}
+@media (max-width: 540px) {
+  .animations .ani_card iframe {
+    width: 340px;
+    height: 250px;
+  }
 }
 
 .boardgames {
-  display: none;
+  width: 100%;
+  height: 100%;
 }
-
 .others {
   display: none;
 }/*# sourceMappingURL=index.css.map */

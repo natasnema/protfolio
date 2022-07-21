@@ -1,10 +1,16 @@
 var design
 var contents = document.querySelector('.contents')
 
-var anis = document.querySelector('.animations')
-var games = document.querySelector('.boardgames')
-var others = document.querySelector('.others')
-
+// fetch('https://natasnema.github.io/protfolio/json/design.json')
+fetch('./json/design.json')
+    .then(function (design_response) {
+        return design_response.json();
+    })
+    .then(function (design_myJson) {
+        design = design_myJson;
+        return design
+    });
+    
 function navclick() {
 
     contents.innerHTML = ""
@@ -97,22 +103,12 @@ function aboutclick() {
         `
 }
 
-fetch('https://natasnema.github.io/protfolio/json/design.json')
-// fetch('../json/design.json')
-    .then(function (design_response) {
-        return design_response.json();
-    })
-    .then(function (design_myJson) {
-        design = design_myJson;
-        return design
-    });
-    
 function webclick() {
 
     contents.innerHTML = 
-    `<section class="websites"></section>`
+    `<section class="websites"><div class="web_cards"></div></section>`
 
-    var websites = document.querySelector('.websites')
+    var websites = document.querySelector('.web_cards')
 
     design.web.forEach(webs => {
 
@@ -148,21 +144,24 @@ function aniclick() {
 
                 <div class="ani_name">${anis.name}</div>
                 <div class="ani_flex">
-                    <div class="ani_poster" style="background-image:url(${anis.poster});"></div>
-                    <div class="ani_info" style="background-image:url(${anis.info});"></div>
+
+                    <div class="ani_img">
+                        <img class="ani_poster" src="${anis.poster}">
+                        <img class="ani_info" src="${anis.info}">
+                    </div>
 
                     <iframe 
                     src="${anis.link}" 
                     title="YouTube video player" 
                     frameborder="0" 
-                    allow="accelerometer; 
-                    autoplay; 
+                    allow="accelerometer;  
                     clipboard-write; 
                     encrypted-media; 
                     gyroscope; 
                     picture-in-picture" 
                     allowfullscreen>
                     </iframe>
+
                 </div>
             </div>
         `
@@ -173,12 +172,18 @@ function gameclick() {
     contents.innerHTML =
         `<section class="boardgames"></section>`
 
-    var animations = document.querySelector('.boardgames')
+    var boardgames = document.querySelector('.boardgames')
 
     design.game.forEach(games => {
-        boardgames.innerHTML = +
-            `
-        
+        boardgames.innerHTML +=
+        `
+        <div class="game_card">
+            <div class="game_name">${games.name}</div>
+            <div class="game_info">${games.info}</div>
+            <div class="game_pic" style="background-image:url(${games.pic});"></div>
+            <div class="game_img_1" style="background-image:url(${games.img_1});"></div>
+            <div class="game_img_2" style="background-image:url(${games.img_2});"></div>
+        </div>
         `
     });
 }

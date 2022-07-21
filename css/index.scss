@@ -48,6 +48,10 @@ body {
     box-sizing: border-box;
 }
 
+* {
+    transition: 0.3s;
+}
+
 .a,
 a:hover {
     text-decoration: none;
@@ -77,7 +81,6 @@ nav {
         border-radius: 999rem;
         border: 5px black solid;
         box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-        transition: 0.5s;
 
         @media (max-width: 750px) {
             margin-top: 10px;
@@ -99,7 +102,6 @@ nav {
         .nav_tag {
             @include mx(10px, 10px);
             @include txt(1.25rem, rgb(150, 150, 150));
-            transition: 0.5s;
 
             &:hover {
                 @include txt(1.35rem, ivory);
@@ -146,6 +148,9 @@ footer {
 .contents {
     width: 100vw;
     height: calc(100vh - 110px);
+    @include bgi();
+    background-image: url(../img/about.jpg);
+    background-size: cover;
     overflow: scroll;
 
     @media (max-width: 750px) {
@@ -228,9 +233,6 @@ footer {
 
 .about {
     width: calc(100% - 250px);
-    @include bgi();
-    background-image: url(../img/about.jpg);
-    background-size: cover;
     @include px(250px, 0);
     @include py(50px, 50px);
     position: relative;
@@ -330,49 +332,68 @@ footer {
 .websites {
     width: 100%;
     height: 100%;
-    @include bgi();
-    background-image: url(../img/about.jpg);
-    background-size: cover;
     @include py(100px, 100px);
-    @include flex(row);
-    flex-wrap: wrap;
 
-    .web_card {
-        width: 15%;
-        @include flex(column);
-        flex-direction: column-reverse;
-        margin: 50px;
+    .web_cards {
+        width: 1540px;
+        @include flex(row);
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: auto;
 
-        .web_name {
-            width: 100%;
-            @include txt(1.25rem, white);
+        @media (max-width: 1500px) {
+            width: 1155px;
         }
 
-        .web_info {
-            width: 100%;
-            @include txt(0.75, rgb(180, 180, 180));
-            @include my(3px, 3px);
-            font-weight: 300;
+        @media (max-width: 1100px) {
+            width: 770px;
         }
 
-        .web_img {
-            width: 100%;
-            overflow: hidden;
+        @media (max-width: 730px) {
+            width: 385px;
+        }
 
-            a {
-                display: block;
+        .web_card {
+            width: 285px;
+            @include flex(column);
+            flex-direction: column-reverse;
+            @include mx(50px, 50px);
+            @include my(50px, 50px);
+
+            @media (max-width: 400px) {
+                @include mx(20px, 20px);
+            }
+
+            .web_name {
                 width: 100%;
-                height: auto;
+                @include txt(1.25rem, white);
+            }
 
-                .web_pic {
+            .web_info {
+                width: 100%;
+                @include txt(0.75, rgb(180, 180, 180));
+                @include my(3px, 3px);
+                font-weight: 300;
+            }
+
+            .web_img {
+                width: 100%;
+                overflow: hidden;
+
+                a {
+                    display: block;
                     width: 100%;
-                    padding-bottom: 100%;
-                    @include bgi();
-                    transition: 0.5s;
+                    height: auto;
 
-                    &:hover {
-                        transform: scale(1.15);
-                        opacity: 0.8;
+                    .web_pic {
+                        width: 100%;
+                        padding-bottom: 100%;
+                        @include bgi();
+
+                        &:hover {
+                            transform: scale(1.15);
+                            opacity: 0.8;
+                        }
                     }
                 }
             }
@@ -382,54 +403,118 @@ footer {
 
 .animations {
     width: 100%;
-    background-image: url(../img/about.jpg);
-    @include bgi();
-    background-size: cover;
+    height: 320%;
     @include flex(column);
     justify-content: flex-start;
 
     .ani_card {
         width: 90%;
+        height: 80%;
         @include txt(1.5rem, white);
         margin: auto;
         @include my(50px, 50px);
+        padding-bottom: 50px;
+        border-bottom: white 3px solid;
+
         .ani_name {
             text-align: left;
             margin: 20px;
+
+            @media (max-width: 1400px) {
+                text-align: center;
+            }
         }
 
         .ani_flex {
+            width: 100%;
+            height: 80%;
             @include flex(row);
-            justify-content: space-between;
-            flex-wrap: wrap;
+            justify-content: flex-start;
 
-            .ani_poster {
-                width: 300px;
-                height: 450px;
-                @include bgi();
-                background-size: cover;
-                margin: 20px;
+            @media (max-width: 1400px) {
+                flex-direction: column;
             }
-    
-            .ani_info {
-                width: 300px;
-                height: 450px;
-                @include bgi();
-                background-size: cover;
-                margin: 20px;
+
+            .ani_img {
+                width: 50%;
+                @include flex(row);
+                justify-content: space-between;
+
+                @media (max-width: 1200px) {
+                    width: 100%;
+                    justify-content: center;
+                }
+
+                .ani_poster {
+                    width: calc(50% - 40px);
+                    margin: 20px;
+
+                    @media (max-width: 1200px) {
+                        width: 260px;
+                    }
+
+                    @media (max-width: 670px) {
+                        width: 200px;
+                    }
+
+                    @media (max-width: 540px) {
+                        width: 150px;
+                    }
+                }
+
+                .ani_info {
+                    width: calc(50% - 40px);
+                    margin: 20px;
+
+                    @media (max-width: 1200px) {
+                        width: 260px;
+                    }
+
+                    @media (max-width: 670px) {
+                        width: 200px;
+                    }
+
+                    @media (max-width: 540px) {
+                        width: 150px;
+                    }
+                }
             }
-    
-            iframe {
-                width: 900px;
+        }
+
+        iframe {
+            width: calc(50% - 40px);
+            height: 100%;
+            margin: 20px;
+
+            @media (max-width: 1400px) {
+                height: 500px;
+            }
+
+            @media (max-width: 1200px) {
+                width: 560px;
                 height: 450px;
-                margin: 20px;
+            }
+
+            @media (max-width: 670px) {
+                width: 440px;
+                height: 350px;
+            }
+
+            @media (max-width: 540px) {
+                width: 340px;
+                height: 250px;
             }
         }
     }
 }
 
 .boardgames {
-    display: none;
+    width: 100%;
+    height: 100%;
+
+    .game_card {
+        
+    }
 }
 
 .others {

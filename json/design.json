@@ -35,42 +35,49 @@
             "name": "GUJA HUNT 好獵手",
             "info": "遊戲設計/遊戲測試",
             "pic": "./img/game_guja_hunt_pic.png",
-            "img": "./img/game_guja_hunt_img.png"
+            "img_1": "./img/game_guja_hunt_img1.png",
+            "img_2": "./img/game_guja_hunt_img2.png"
+
         },
         {
             "class": "game_workers",
-            "name": "Workers 工人物語",
+            "name": "Workers 工人危機",
             "info": "遊戲設計/遊戲測試",
             "pic": "./img/game_workers_pic.png",
-            "img": "./img/game_workers_img.png"
+            "img_1": "./img/game_workers_img1.png",
+            "img_2": "./img/game_workers_img2.png"
         },
         {
             "class": "game_crowdfun",
             "name": "CrowdFun 募樂",
             "info": "遊戲設計/遊戲測試",
             "pic": "./img/game_crowdfun_pic.png",
-            "img": "./img/game_crowdfun_img.png"
+            "img_1": "./img/game_crowdfun_img1.png",
+            "img_2": "./img/game_crowdfun_img2.png"
         },
         {
             "class": "game_stone_cold_kitty",
             "name": "Stone Cold Kitty 冰山美喵",
             "info": "遊戲設計/遊戲測試",
             "pic": "./img/game_stone_cold_kitty_pic.png",
-            "img": "./img/game_stone_cold_kitty_img.png"
+            "img_1": "./img/game_stone_cold_kitty_img1.png",
+            "img_2": "./img/game_stone_cold_kitty_img2.png"
         },
         {
             "class": "game_bethlehem",
             "name": "Bethlehem 伯利恆之星",
             "info": "遊戲設計/遊戲測試",
             "pic": "./img/game_bethlehem_pic.png",
-            "img": "./img/game_bethlehem_img.png"
+            "img_1": "./img/game_bethlehem_img1.png",
+            "img_2": "./img/game_bethlehem_img2.png"
         },
         {
             "class": "game_52_days",
             "name": "52 Days 五十二日",
             "info": "遊戲設計/遊戲測試",
             "pic": "./img/game_52_days_pic.png",
-            "img": "./img/game_52_days_img.png"
+            "img_1": "./img/game_52_days_img1.png",
+            "img_2": "./img/game_52_days_img2.png"
         }
     ],
     "web": [
@@ -128,14 +135,6 @@
             "img": "./img/web_pokemon.png",
             "color": "#fff",
             "link": "https://natasnema.github.io/practice_pokemon/"
-        },
-        {
-            "class": "",
-            "name": "",
-            "info": "",
-            "img": "",
-            "color": "rgba(0, 0, 0, 0)",
-            "link": ""
         }
     ]
 }
