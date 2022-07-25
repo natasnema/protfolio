@@ -73,6 +73,9 @@ nav {
     @include px(50px, 50px);
     justify-content: space-between;
     background-color: rgb(70, 70, 70);
+    position: fixed;
+    top: 0;
+    z-index: 3;
 
     @media (max-width: 750px) {
         height: 120px;
@@ -140,7 +143,10 @@ footer {
     width: 100%;
     height: 30px;
     background-color: rgb(70, 70, 70);
+    position: fixed;
+    bottom: 0;
     @include flex(row);
+    z-index: 3;
 
     @media (max-width: 600px) {
         height: 80px;
@@ -155,23 +161,20 @@ footer {
 
 .contents {
     width: 100vw;
-    height: calc(100vh - 110px);
     @include bgi();
     background-image: url(../img/about.jpg);
     background-size: cover;
     overflow: scroll;
+    padding-top: 80px;
 
     @media (max-width: 750px) {
-        height: calc(100vh - 150px);
-    }
-    @media (max-width: 600px) {
-        height: calc(100vh - 200px);
+        padding-top: 120px;
     }
 }
 
 .info {
     width: 100%;
-    height: 230%;
+    height: 230vh;
 
     .info_banner {
         width: 100%;
@@ -202,9 +205,10 @@ footer {
         height: 40%;
         background-color: black;
         @include py(50px, 50px);
+        display: block;
 
         @media (max-width:400px) {
-            height: 75%;            
+            height: 50%;            
         }
 
         .info_photo {
@@ -215,31 +219,58 @@ footer {
             background-image: url(../img/info_photo.jpg);
             @include bgi();
             margin-bottom: 20px;
+
+            @media (max-width:400px) {
+                width: 250px;
+                height: 250px;            
+            }
         }
 
-        .info_name_en {
-            @include txt(4rem, rgba(0, 0, 0, 0));
-            font-family: "Dela Gothic One", cursive;
-            background: linear-gradient(to right, rgb(48, 255, 127), rgb(167, 241, 241), rgb(0, 153, 153));
-            background-clip: text;
-        }
+        .info_nema_txt {
+            display: none;
+            animation: info_nema_txt_fadein 5s linear;
 
-        .info_profession_en {
-            @include txt(1.5rem, ivory);
-        }
+            @keyframes info_nema_txt_fadein {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-50px);
+                }
 
-        .info_name_ch {
-            @include txt(2rem, ivory);
-            @include my(30px, 10px);
-        }
+                70% {
+                    opacity: 0.5;
+                    transform: translateY(-10px);
+                }
 
-        .info_profession_ch {
-            @include txt(1.5rem, ivory);
-        }
-
-        .info_skill {
-            @include txt(1rem, ivory);
-            @include my(30px, 10px);
+                100% {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+            }
+    
+            .info_name_en {
+                @include txt(4rem, rgba(0, 0, 0, 0));
+                font-family: "Dela Gothic One", cursive;
+                background: linear-gradient(to right, rgb(48, 255, 127), rgb(167, 241, 241), rgb(0, 153, 153));
+                background-clip: text;
+            }
+    
+            .info_profession_en {
+                @include txt(1.5rem, ivory);
+            }
+    
+            .info_name_ch {
+                @include txt(2rem, ivory);
+                @include my(30px, 10px);
+            }
+    
+            .info_profession_ch {
+                @include txt(1.5rem, ivory);
+            }
+    
+            .info_skill {
+                @include txt(1rem, ivory);
+                @include my(30px, 10px);
+            }
         }
     }
 }
@@ -265,7 +296,6 @@ footer {
         background-image: url(../img/about_cat.png);
         @include bgi();
         background-size: cover;
-        z-index: 1;
 
         @media (max-width: 600px) {
             bottom: 80px;
@@ -344,7 +374,7 @@ footer {
 
 .websites {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     @include py(100px, 100px);
 
     .web_cards {
@@ -417,7 +447,7 @@ footer {
 
 .animations {
     width: 100%;
-    height: 350%;
+    height: 310vh;
     @include flex(column);
     justify-content: flex-start;
 
@@ -524,7 +554,7 @@ footer {
 
 .boardgames {
     width: 100%;
-    height: 120%;
+    height: 150vh;
 
     .game_card {
         width: 90%;
@@ -532,6 +562,7 @@ footer {
         padding-top: 5%;
         @include my(0%, 5%);
         @include py(5%, 5%);
+        border-bottom: 2px white solid;
 
         @media (max-width:400px) {
             @include my(15%, 15%);

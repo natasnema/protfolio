@@ -38,6 +38,9 @@ nav {
   padding-right: 50px;
   justify-content: space-between;
   background-color: rgb(70, 70, 70);
+  position: fixed;
+  top: 0;
+  z-index: 3;
 }
 @media (max-width: 750px) {
   nav {
@@ -123,10 +126,13 @@ footer {
   width: 100%;
   height: 30px;
   background-color: rgb(70, 70, 70);
+  position: fixed;
+  bottom: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  z-index: 3;
 }
 @media (max-width: 600px) {
   footer {
@@ -145,28 +151,23 @@ footer .footer_info {
 
 .contents {
   width: 100vw;
-  height: calc(100vh - 110px);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url(../img/about.jpg);
   background-size: cover;
   overflow: scroll;
+  padding-top: 80px;
 }
 @media (max-width: 750px) {
   .contents {
-    height: calc(100vh - 150px);
-  }
-}
-@media (max-width: 600px) {
-  .contents {
-    height: calc(100vh - 200px);
+    padding-top: 120px;
   }
 }
 
 .info {
   width: 100%;
-  height: 230%;
+  height: 230vh;
 }
 .info .info_banner {
   width: 100%;
@@ -201,10 +202,11 @@ footer .footer_info {
   background-color: black;
   padding-top: 50px;
   padding-bottom: 50px;
+  display: block;
 }
 @media (max-width: 400px) {
   .info .info_nema {
-    height: 75%;
+    height: 50%;
   }
 }
 .info .info_nema .info_photo {
@@ -218,7 +220,46 @@ footer .footer_info {
   background-size: contain;
   margin-bottom: 20px;
 }
-.info .info_nema .info_name_en {
+@media (max-width: 400px) {
+  .info .info_nema .info_photo {
+    width: 250px;
+    height: 250px;
+  }
+}
+.info .info_nema .info_nema_txt {
+  display: none;
+  -webkit-animation: info_nema_txt_fadein 5s linear;
+          animation: info_nema_txt_fadein 5s linear;
+}
+@-webkit-keyframes info_nema_txt_fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  70% {
+    opacity: 0.5;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes info_nema_txt_fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  70% {
+    opacity: 0.5;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.info .info_nema .info_nema_txt .info_name_en {
   color: rgba(0, 0, 0, 0);
   font-family: "Roboto Mono", monospace, "Noto Sans TC", sans-serif;
   font-size: 4rem;
@@ -228,13 +269,13 @@ footer .footer_info {
   -webkit-background-clip: text;
           background-clip: text;
 }
-.info .info_nema .info_profession_en {
+.info .info_nema .info_nema_txt .info_profession_en {
   color: ivory;
   font-family: "Roboto Mono", monospace, "Noto Sans TC", sans-serif;
   font-size: 1.5rem;
   text-align: center;
 }
-.info .info_nema .info_name_ch {
+.info .info_nema .info_nema_txt .info_name_ch {
   color: ivory;
   font-family: "Roboto Mono", monospace, "Noto Sans TC", sans-serif;
   font-size: 2rem;
@@ -242,13 +283,13 @@ footer .footer_info {
   margin-top: 30px;
   margin-bottom: 10px;
 }
-.info .info_nema .info_profession_ch {
+.info .info_nema .info_nema_txt .info_profession_ch {
   color: ivory;
   font-family: "Roboto Mono", monospace, "Noto Sans TC", sans-serif;
   font-size: 1.5rem;
   text-align: center;
 }
-.info .info_nema .info_skill {
+.info .info_nema .info_nema_txt .info_skill {
   color: ivory;
   font-family: "Roboto Mono", monospace, "Noto Sans TC", sans-serif;
   font-size: 1rem;
@@ -285,7 +326,6 @@ footer .footer_info {
   background-repeat: no-repeat;
   background-size: contain;
   background-size: cover;
-  z-index: 1;
 }
 @media (max-width: 600px) {
   .about .about_cat {
@@ -386,7 +426,7 @@ footer .footer_info {
 
 .websites {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -474,7 +514,7 @@ footer .footer_info {
 
 .animations {
   width: 100%;
-  height: 350%;
+  height: 310vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -600,7 +640,7 @@ footer .footer_info {
 
 .boardgames {
   width: 100%;
-  height: 120%;
+  height: 150vh;
 }
 .boardgames .game_card {
   width: 90%;
@@ -610,6 +650,7 @@ footer .footer_info {
   margin-bottom: 5%;
   padding-top: 5%;
   padding-bottom: 5%;
+  border-bottom: 2px white solid;
 }
 @media (max-width: 400px) {
   .boardgames .game_card {

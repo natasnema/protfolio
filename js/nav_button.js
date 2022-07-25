@@ -1,3 +1,5 @@
+// nav 標籤點擊
+
 var design
 var contents = document.querySelector('.contents')
 
@@ -10,7 +12,7 @@ fetch('./json/design.json')
         design = design_myJson;
         return design
     });
-    
+
 function navclick() {
 
     contents.innerHTML = ""
@@ -18,24 +20,34 @@ function navclick() {
     contents.innerHTML =
         `
         <section class="info">
+
             <div class="info_banner">
                 <div class="info_logo"></div>
             </div>
 
             <div class="info_nema">
+                    <div class="info_photo"></div>
 
-                <div class="info_photo"></div>
-                <div class="info_name_en">NEMA LIN</div>
-                <div class="info_profession_en">Frontend Developer / Boardgame Designer / Graphic Designer / 3D
-                    Animation
+                    <div class="info_nema_txt">
+                        <div class="info_name_en">NEMA
+                            <br class="rwd">LIN
+                        </div>
+                        <div class="info_profession_en">Frontend Developer /
+                            <br class="rwd">Boardgame Designer /
+                            <br class="rwd">Graphic Designer /
+                            <br class="rwd">3D Animation
+                        </div>
+                        <div class="info_name_ch">林宸裕　<br class="rwd">CHEN-YU, LIN</div>
+                        <div class="info_profession_ch">前端工程師 / 桌遊設計 /
+                            <br class="rwd">平面設計 / 3D動畫
+                        </div>
+                        <div class="info_skill">
+                            HTML5 / CSS / SCSS / JavaScript / Vue<br>Illustrator / Photoshop / AfterEffects /
+                            Premiere<br>Maya /
+                            Blender</div>
                 </div>
-                <div class="info_name_ch">林宸裕　CHEN-YU, LIN</div>
-                <div class="info_profession_ch">前端工程師 / 桌遊設計 / 平面設計 / 3D動畫</div>
-                <div class="info_skill">
-                    HTML5 / CSS / SCSS / JavaScript / Vue<br>Illustrator / Photoshop / AfterEffects / Premiere<br>Maya /
-                    Blender</div>
-
             </div>
+
         </section>
         `
 }
@@ -105,8 +117,8 @@ function aboutclick() {
 
 function webclick() {
 
-    contents.innerHTML = 
-    `<section class="websites"><div class="web_cards"></div></section>`
+    contents.innerHTML =
+        `<section class="websites"><div class="web_cards"></div></section>`
 
     var websites = document.querySelector('.web_cards')
 
@@ -132,14 +144,14 @@ function webclick() {
 
 function aniclick() {
 
-    contents.innerHTML = 
-    `<section class="animations"></section>`
+    contents.innerHTML =
+        `<section class="animations"></section>`
 
     var animations = document.querySelector('.animations')
 
     design.ani.forEach(anis => {
         animations.innerHTML +=
-        `
+            `
             <div class="ani_card">
 
                 <div class="ani_name">${anis.name}</div>
@@ -176,7 +188,7 @@ function gameclick() {
 
     design.game.forEach(games => {
         boardgames.innerHTML +=
-        `
+            `
         <div class="game_card">
 
             <div class="game_txt">
@@ -194,5 +206,36 @@ function gameclick() {
         `
     });
 }
+
+// 偵測滾輪
+
+let lastKnownScrollPosition = 0;
+let ticking = false;
+var infonematxt = document.querySelector('.info_nema_txt')
+
+function doSomething(scrollPos) {
+    // if (document.body.clientWidth > 400) {
+        if (document.documentElement.scrollTop < 800) {
+            infonematxt.style = 'display: none;'
+        } else {
+            infonematxt.style = 'display: block;'
+        }
+    // }
+}
+
+document.addEventListener('scroll', function (e) {
+    lastKnownScrollPosition = window.scrollY;
+
+    if (!ticking) {
+        window.requestAnimationFrame(function () {
+            doSomething(lastKnownScrollPosition);
+            ticking = false;
+        });
+
+        ticking = true;
+    }
+});
+
+
 
 
