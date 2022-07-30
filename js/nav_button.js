@@ -3,8 +3,8 @@
 var design
 var contents = document.querySelector('.contents')
 
-// fetch('https://natasnema.github.io/protfolio/json/design.json')
-fetch('./json/design.json')
+fetch('https://natasnema.github.io/protfolio/json/design.json')
+// fetch('./json/design.json')
     .then(function (design_response) {
         return design_response.json();
     })
@@ -21,34 +21,35 @@ function navclick() {
         `
         <section class="info">
 
-            <div class="info_banner">
-                <div class="info_logo"></div>
+        <div class="info_banner">
+            <div class="info_logo"></div>
+        </div>
+
+        <div class="info_nema">
+                <div class="info_photo"></div>
+
+                <div class="info_nema_txt" style="display:block;">
+
+                    <div class="info_name_en">NEMA
+                        <br class="rwd">LIN
+                    </div>
+                    <div class="info_profession_en">Frontend Developer /
+                        <br class="rwd">Boardgame Designer /
+                        <br class="rwd">Graphic Designer /
+                        <br class="rwd">3D Animation
+                    </div>
+                    <div class="info_name_ch">林宸裕　<br class="rwd">CHEN-YU, LIN</div>
+                    <div class="info_profession_ch">前端工程師 / 桌遊設計 /
+                        <br class="rwd">平面設計 / 3D動畫
+                    </div>
+                    <div class="info_skill">
+                        HTML5 / CSS / SCSS / JavaScript / Vue<br>Illustrator / Photoshop / AfterEffects /
+                        Premiere<br>Maya /
+                        Blender</div>
             </div>
+        </div>
 
-            <div class="info_nema">
-                    <div class="info_photo"></div>
-
-                    <div class="info_nema_txt">
-                        <div class="info_name_en">NEMA
-                            <br class="rwd">LIN
-                        </div>
-                        <div class="info_profession_en">Frontend Developer /
-                            <br class="rwd">Boardgame Designer /
-                            <br class="rwd">Graphic Designer /
-                            <br class="rwd">3D Animation
-                        </div>
-                        <div class="info_name_ch">林宸裕　<br class="rwd">CHEN-YU, LIN</div>
-                        <div class="info_profession_ch">前端工程師 / 桌遊設計 /
-                            <br class="rwd">平面設計 / 3D動畫
-                        </div>
-                        <div class="info_skill">
-                            HTML5 / CSS / SCSS / JavaScript / Vue<br>Illustrator / Photoshop / AfterEffects /
-                            Premiere<br>Maya /
-                            Blender</div>
-                </div>
-            </div>
-
-        </section>
+    </section>
         `
 }
 
