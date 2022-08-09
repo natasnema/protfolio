@@ -3,29 +3,29 @@
         {
             "class": "ani_Mr_Gluttony",
             "name": "Mr.Gluttony",
-            "poster": "./img/ani_Mr_Gluttony_poster.png",
-            "info": "./img/ani_Mr_Gluttony_info.png",
+            "poster": "./img/ani/ani_Mr_Gluttony_poster.png",
+            "info": "./img/ani/ani_Mr_Gluttony_info.png",
             "link": "https://www.youtube.com/embed/SijewyFER-E"
         },
         {
             "class": "web_Love_Letter",
             "name": "Love Letter",
-            "poster": "./img/ani_Love_Letter_poster.png",
-            "info": "./img/ani_Love_Letter_info.png",
+            "poster": "./img/ani/ani_Love_Letter_poster.png",
+            "info": "./img/ani/ani_Love_Letter_info.png",
             "link": "https://www.youtube.com/embed/5Edv_zxONpE"
         },
         {
             "class": "web_Pin_Ann",
             "name": "平安",
-            "poster": "./img/ani_Pin_Ann_poster.png",
-            "info": "./img/ani_Pin_Ann_info.png",
+            "poster": "./img/ani/ani_Pin_Ann_poster.png",
+            "info": "./img/ani/ani_Pin_Ann_info.png",
             "link": "https://www.youtube.com/embed/NJFoDY3YR2M"
         },
         {
             "class": "web_Boo",
             "name": "BOO",
-            "poster": "./img/ani_Boo_poster.png",
-            "info": "./img/ani_Boo_info.png",
+            "poster": "./img/ani/ani_Boo_poster.png",
+            "info": "./img/ani/ani_Boo_info.png",
             "link": "https://www.youtube.com/embed/NlysG3TvWY8"
         }
     ],
@@ -34,50 +34,50 @@
             "class": "game_guja_hunt",
             "name": "GUJA HUNT 好獵手",
             "info": "遊戲設計/遊戲測試",
-            "pic": "./img/game_guja_hunt_pic.png",
-            "img_1": "./img/game_guja_hunt_img1.png",
-            "img_2": "./img/game_guja_hunt_img2.png"
+            "pic": "./img/game/game_guja_hunt_pic.png",
+            "img_1": "./img/game/game_guja_hunt_img1.png",
+            "img_2": "./img/game/game_guja_hunt_img2.png"
 
         },
         {
             "class": "game_workers",
             "name": "Workers 工人危機",
             "info": "遊戲設計/遊戲測試",
-            "pic": "./img/game_workers_pic.png",
-            "img_1": "./img/game_workers_img1.png",
-            "img_2": "./img/game_workers_img2.png"
+            "pic": "./img/game/game_workers_pic.png",
+            "img_1": "./img/game/game_workers_img1.png",
+            "img_2": "./img/game/game_workers_img2.png"
         },
         {
             "class": "game_crowdfun",
             "name": "CrowdFun 募樂",
             "info": "遊戲設計/遊戲測試",
-            "pic": "./img/game_crowdfun_pic.png",
-            "img_1": "./img/game_crowdfun_img1.png",
-            "img_2": "./img/game_crowdfun_img2.png"
+            "pic": "./img/game/game_crowdfun_pic.png",
+            "img_1": "./img/game/game_crowdfun_img1.png",
+            "img_2": "./img/game/game_crowdfun_img2.png"
         },
         {
             "class": "game_stone_cold_kitty",
             "name": "Stone Cold Kitty 冰山美喵",
             "info": "遊戲設計/遊戲測試",
-            "pic": "./img/game_stone_cold_kitty_pic.png",
-            "img_1": "./img/game_stone_cold_kitty_img1.png",
-            "img_2": "./img/game_stone_cold_kitty_img2.png"
+            "pic": "./img/game/game_stone_cold_kitty_pic.png",
+            "img_1": "./img/game/game_stone_cold_kitty_img1.png",
+            "img_2": "./img/game/game_stone_cold_kitty_img2.png"
         },
         {
             "class": "game_bethlehem",
             "name": "Bethlehem 伯利恆之星",
             "info": "遊戲設計/遊戲測試",
-            "pic": "./img/game_bethlehem_pic.png",
-            "img_1": "./img/game_bethlehem_img1.png",
-            "img_2": "./img/game_bethlehem_img2.png"
+            "pic": "./img/game/game_bethlehem_pic.png",
+            "img_1": "./img/game/game_bethlehem_img1.png",
+            "img_2": "./img/game/game_bethlehem_img2.png"
         },
         {
             "class": "game_52_days",
             "name": "52 Days 五十二日",
             "info": "遊戲設計/遊戲測試",
-            "pic": "./img/game_52_days_pic.png",
-            "img_1": "./img/game_52_days_img1.png",
-            "img_2": "./img/game_52_days_img2.png"
+            "pic": "./img/game/game_52_days_pic.png",
+            "img_1": "./img/game/game_52_days_img1.png",
+            "img_2": "./img/game/game_52_days_img2.png"
         }
     ],
     "web": [
@@ -85,7 +85,7 @@
             "class": "web_protfolio",
             "name": "NEMA 作品集網站",
             "info": "全站製作與設計",
-            "img": "./img/web_portfolio.png",
+            "img": "./img/web/web_portfolio.png",
             "color": "#fff",
             "link": "https://natasnema.github.io/protfolio/"
         },
@@ -93,14 +93,15 @@
             "class": "web_spirited",
             "name": "SPIRITED 美式餅乾",
             "info": "網頁切版/網站動畫與效果",
-            "img": "./img/web_spirited.png",
+            "img": "./img/web/web_spirited.png",
+            "color": "#fff",
             "link": "https://natasnema.github.io/Spirited/"
         },
         {
             "class": "web_morefun",
             "name": "玩坊 敏捷練習",
             "info": "全站製作與設計",
-            "img": "./img/web_morefun.png",
+            "img": "./img/web/web_morefun.png",
             "color": "#fff",
             "link": "https://natasnema.github.io/practice_morefun/"
         },
@@ -108,7 +109,7 @@
             "class": "web_pwin",
             "name": "微軟首頁 仿切",
             "info": "切版/RWD 練習",
-            "img": "./img/web_win.png",
+            "img": "./img/web/web_win.png",
             "color": "#fff",
             "link": "https://natasnema.github.io/practice_microsoft/"
         },
@@ -116,7 +117,7 @@
             "class": "web_pdigi",
             "name": "Bootstrap 練習",
             "info": "切版/RWD 練習",
-            "img": "./img/web_digi.png",
+            "img": "./img/web/web_digi.png",
             "color": "#fff",
             "link": "https://natasnema.github.io/practice_digi_pack/"
         },
@@ -124,7 +125,7 @@
             "class": "web_colorblind",
             "name": "色弱小遊戲",
             "info": "JS 練習",
-            "img": "./img/web_colorblind.png",
+            "img": "./img/web/web_colorblind.png",
             "color": "#fff",
             "link": "https://natasnema.github.io/practice_colorblind/"
         },
@@ -132,9 +133,56 @@
             "class": "web_pokemon",
             "name": "寶可夢",
             "info": "SCSS/HTML練習",
-            "img": "./img/web_pokemon.png",
+            "img": "./img/web/web_pokemon.png",
             "color": "#fff",
             "link": "https://natasnema.github.io/practice_pokemon/"
+        }
+    ],
+    "other": [
+        {
+            "class": "others_logo_nema",
+            "name": "LOGO / NEMA",
+            "img": "./img/other/logo_nema.jpg"
+        },
+        {
+            "class": "others_logo_raya",
+            "name": "LOGO / 睿業科技",
+            "img": "./img/other/logo_raya.jpg"
+        },
+        {
+            "class": "others_logo_chen",
+            "name": "LOGO / 陳宅",
+            "img": "./img/other/logo_chen.jpg"
+        },
+        {
+            "class": "others_logo_chen_fin",
+            "name": "LOGO / 陳宅最終版",
+            "img": "./img/other/logo_chen_fin.jpg"
+        },
+        {
+            "class": "others_logo_nl",
+            "name": "LOGO / NL",
+            "img": "./img/other/logo_nl.jpg"
+        },
+        {
+            "class": "others_poly_nema",
+            "name": "LOWPOLY / NEMA",
+            "img": "./img/other/poly_nema.jpg"
+        },
+        {
+            "class": "others_poly_cat",
+            "name": "LOWPOLY / 貓",
+            "img": "./img/other/poly_cat.jpg"
+        },
+        {
+            "class": "others_poly_dacscloud",
+            "name": "LOWPOLY / DACSCLOUD",
+            "img": "./img/other/poly_dacscloud.jpg"
+        },
+        {
+            "class": "others_poly_c_chill",
+            "name": "LOWPOLY / C胖",
+            "img": "./img/other/poly_c_chill.jpg"
         }
     ]
 }

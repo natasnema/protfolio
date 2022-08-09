@@ -228,8 +228,8 @@ footer .footer_info {
 }
 .info .info_nema .info_nema_txt {
   display: none;
-  -webkit-animation: info_nema_txt_fadein 5s linear;
-          animation: info_nema_txt_fadein 5s linear;
+  -webkit-animation: info_nema_txt_fadein 2s linear;
+          animation: info_nema_txt_fadein 2s linear;
 }
 @-webkit-keyframes info_nema_txt_fadein {
   0% {
@@ -720,5 +720,45 @@ footer .footer_info {
 }
 
 .others {
-  display: none;
+  width: 100%;
+  height: 150vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.others .other_card {
+  width: 300px;
+  height: 400px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.others .other_card .other_name {
+  height: 50px;
+  border-bottom: 1px solid white;
+  color: white;
+  font-family: "Roboto Mono", monospace, "Noto Sans TC", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.others .other_card .other_pic {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  background: #fff;
+}
+.others .other_card .other_img {
+  width: 300px;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.others .other_card .other_img:hover {
+  transform: scale(1.15);
+  opacity: 0.8;
 }/*# sourceMappingURL=index.css.map */

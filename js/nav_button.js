@@ -208,6 +208,26 @@ function gameclick() {
     });
 }
 
+function otherclick() {
+    contents.innerHTML =
+        `<section class="others"></section>`
+
+        var others = document.querySelector('.others')
+
+        design.other.forEach(images => {
+            others.innerHTML +=
+            `
+            <div class="other_card">
+                <div class="other_name">${images.name}</div>
+                <div class="other_pic">
+                    <div class="other_img" style="background-image:url(${images.img});"></div>
+                </div>
+            </div>
+            `
+        })
+
+}
+
 // 偵測滾輪
 
 let lastKnownScrollPosition = 0;

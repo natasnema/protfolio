@@ -228,7 +228,7 @@ footer {
 
         .info_nema_txt {
             display: none;
-            animation: info_nema_txt_fadein 5s linear;
+            animation: info_nema_txt_fadein 2s linear;
 
             @keyframes info_nema_txt_fadein {
                 0% {
@@ -621,5 +621,40 @@ footer {
 }
 
 .others {
-    display: none;
+    width: 100%;
+    height: 150vh;
+    @include flex(row);
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .other_card {
+        width: 300px;
+        height: 400px;
+        @include mx(20px, 20px);
+
+        .other_name {
+            height: 50px;
+            border-bottom: 1px solid white ; 
+            @include txt(1.5rem, white);
+            @include my(0px, 10px)
+        }
+
+        .other_pic {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .other_img {
+            width: 300px;
+            height: 300px;
+            @include bgi();
+
+            &:hover {
+                transform: scale(1.15);
+                opacity: 0.8;
+            }
+        }
+    }
 }
