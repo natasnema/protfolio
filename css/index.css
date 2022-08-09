@@ -427,6 +427,7 @@ footer .footer_info {
 .websites {
   width: 100%;
   height: 100vh;
+  overflow: scroll;
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -514,7 +515,8 @@ footer .footer_info {
 
 .animations {
   width: 100%;
-  height: 310vh;
+  height: 100vh;
+  overflow: scroll;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -640,7 +642,8 @@ footer .footer_info {
 
 .boardgames {
   width: 100%;
-  height: 150vh;
+  height: 100vh;
+  overflow: scroll;
 }
 .boardgames .game_card {
   width: 90%;
@@ -720,20 +723,30 @@ footer .footer_info {
 }
 
 .others {
-  width: 100%;
-  height: 150vh;
+  width: 80%;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: scroll;
 }
 .others .other_card {
   width: 300px;
   height: 400px;
   margin-left: 20px;
   margin-right: 20px;
+}
+@media (max-width: 450px) {
+  .others .other_card {
+    width: 200px;
+    height: 300px;
+  }
 }
 .others .other_card .other_name {
   height: 50px;
@@ -751,12 +764,24 @@ footer .footer_info {
   overflow: hidden;
   background: #fff;
 }
+@media (max-width: 450px) {
+  .others .other_card .other_pic {
+    width: 200px;
+    height: 200px;
+  }
+}
 .others .other_card .other_img {
   width: 300px;
   height: 300px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+@media (max-width: 450px) {
+  .others .other_card .other_img {
+    width: 200px;
+    height: 200px;
+  }
 }
 .others .other_card .other_img:hover {
   transform: scale(1.15);
