@@ -225,7 +225,6 @@ function otherclick() {
             </div>
             `
         })
-
 }
 
 // 偵測滾輪
