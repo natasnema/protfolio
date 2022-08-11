@@ -758,6 +758,11 @@ footer .footer_info {
   margin-top: 0px;
   margin-bottom: 10px;
 }
+@media (max-width: 450px) {
+  .others .other_card .other_name {
+    font-size: 0.8rem;
+  }
+}
 .others .other_card .other_pic {
   width: 300px;
   height: 300px;

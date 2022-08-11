@@ -648,6 +648,10 @@ footer {
             border-bottom: 1px solid white;
             @include txt(1.5rem, white);
             @include my(0px, 10px);
+
+            @media (max-width: 450px) {
+                font-size: 0.8rem;
+            }
         }
 
         .other_pic {
